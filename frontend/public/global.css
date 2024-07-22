@@ -1,3 +1,13 @@
+:root {
+    --background-colour: #ffffff;
+    --card-colour: #dfdfdf;
+    --card-colour-active: #99aeff;
+
+    --background-colour_dark: #2c2c2c;
+    --card-colour_dark: #393939;
+    --card-active-colour_dark: #223355;
+}
+
 html, body {
     position: relative;
     width: 100%;

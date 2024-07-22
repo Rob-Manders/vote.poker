@@ -57,7 +57,7 @@
     div {
         display: flex;
         flex-direction: column;
-        border: 1px solid black;
+        background-color: var(--card-colour);
         height: 200px;
         width: 150px;
         padding: 10px;
@@ -90,16 +90,20 @@
     }
 
     div.voted {
-        background: #ccddff;
+        background: var(--card-colour-active);
     }
 
     @media (prefers-color-scheme: dark) {
+        div {
+            background-color: var(--card-colour_dark);
+        }
+
         div .name.us .changename {
             color: rgb(100, 200, 255);
         }
 
         div.voted {
-            background-color: #223355;
+            background-color: var(--card-active-colour_dark);
         }
     }
 </style>

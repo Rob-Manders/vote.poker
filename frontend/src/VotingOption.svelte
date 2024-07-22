@@ -25,13 +25,13 @@
 
 <style>
     .voting-option {
-        height: 150px;
+        position: relative;
+        height: 90px;
         display: flex;
-        margin-top: 60px;
     }
-    
+
     .card {
-        border: 1px solid black;
+        background-color: var(--card-colour);
         height: 100px;
         width: 100px;
         max-width: 100px;
@@ -43,6 +43,18 @@
         font-weight: bold;
         flex: 10%;
         align-self: flex-end;
+        transition: 150ms ease-in-out;
+        box-shadow: 0 -5px 15px -10px rgba(0, 0, 0, 0.75);
+    }
+
+    .voting-option::after {
+        position: absolute;
+        content: '';
+        left: -3px;
+        right: -3px;
+        bottom: -10px;
+        height: 30px;
+        background: linear-gradient(0deg, var(--background-colour) 0%, var(--background-colour) 35%, rgba(0, 0, 0, 0) 100%);
     }
 
     div.selectable:hover {
@@ -50,14 +62,22 @@
     }
 
     div.selectable:hover, div.selected {
-        background: #3366ff;
-        color: white;
-        height: 150px;
+        background: var(--card-colour-active);
+        /*color: white;*/
+        height: 115px;
     }
 
     @media (prefers-color-scheme: dark) {
+        .card {
+            background-color: var(--card-colour_dark);
+        }
+
+        .voting-option::after {
+            background: linear-gradient(0deg, var(--background-colour_dark) 0%, var(--background-colour_dark) 35%, rgba(0, 0, 0, 0) 100%);
+        }
+
         div.selectable:hover, div.selected {
-            background-color: #223355;
+            background-color: var(--card-active-colour_dark);
         }
     }
 </style>

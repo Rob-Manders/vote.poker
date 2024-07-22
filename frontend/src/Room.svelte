@@ -20,7 +20,9 @@
 {/if}
 
 <div id="observers">
+{#if observers.length > 0}
     <p><strong>Observers:</strong> {observers.map(v => v.voter_name.trim()).join(", ")}</p>
+{/if}
 </div>
 
 <div id="voters">
@@ -39,6 +41,7 @@
 
 <style>
     #observers {
+        height: 2rem;
         width: 100%;
         text-align: left;
     }
@@ -46,6 +49,7 @@
     #voters {
         display: flex;
         flex-direction: row;
+        justify-content: center;
     }
 
 </style>

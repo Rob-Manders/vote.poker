@@ -22,9 +22,9 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: flex-end;
         width: 100%;
-        border-bottom: 1px solid black;
+        margin-top: 110px;
     }
 </style>
